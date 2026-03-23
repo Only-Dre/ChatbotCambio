@@ -1,0 +1,43 @@
+version: "3.1"
+
+nlu:
+
+- intent: converter_moeda
+  examples: |
+    - Converta [100](valor) [dólares](moeda_origem) para [reais](moeda_destino)
+    - Quanto dá [50](valor) [euros](moeda_origem) em [reais](moeda_destino)
+    - Quero converter [200](valor) [reais](moeda_origem) para [dólares](moeda_destino)
+    - [500](valor) [libras](moeda_origem) em [euros](moeda_destino)
+    - Me converta [1000](valor) [reais](moeda_origem) para [euros](moeda_destino)
+    - X em Y: [300](valor) [dólares](moeda_origem) em [reais](moeda_destino)
+    - Converta [75](valor) [euros](moeda_origem) em [dólares](moeda_destino)
+    - [20](valor) [dólares](moeda_origem) para [reais](moeda_destino)
+    - Quanto é [150](valor) [reais](moeda_origem) em [dólares](moeda_destino)
+    - Converter [400](valor) [ienes](moeda_origem) para [reais](moeda_destino)
+
+- intent: listar_moedas
+  examples: |
+    - Quais moedas você suporta?
+    - Que moedas estão disponíveis?
+    - Quais são as moedas aceitas?
+    - Me mostre as moedas disponíveis
+    - Lista de moedas
+    - Quais moedas posso converter?
+
+- intent: cumprimentar
+  examples: |
+    - Olá
+    - Oi
+    - Bom dia
+    - Boa tarde
+    - Boa noite
+    - Olá, tudo bem?
+    - Oi, preciso de ajuda
+
+- intent: tchau
+  examples: |
+    - Tchau
+    - Até mais
+    - Obrigado, tchau
+    - Valeu, até mais
+    - Encerrar

@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: Cumprimentar usuário
+  steps:
+    - intent: cumprimentar
+    - action: utter_cumprimentar
+
+- rule: Encerrar conversa
+  steps:
+    - intent: tchau
+    - action: utter_tchau
+
+- rule: Listar moedas disponíveis
+  steps:
+    - intent: listar_moedas
+    - action: action_listar_moedas
+
+- rule: Converter moeda quando tudo informado
+  steps:
+    - intent: converter_moeda
+    - action: action_converter_moeda

@@ -1,0 +1,61 @@
+version: "3.1"
+
+stories:
+
+- story: Conversão completa de uma vez
+  steps:
+    - intent: converter_moeda
+      entities:
+        - valor: "100"
+        - moeda_origem: "dólares"
+        - moeda_destino: "reais"
+    - action: action_converter_moeda
+
+- story: Usuário não informa o valor
+  steps:
+    - intent: converter_moeda
+      entities:
+        - moeda_origem: "euros"
+        - moeda_destino: "reais"
+    - action: utter_pedir_valor
+    - intent: converter_moeda
+      entities:
+        - valor: "200"
+    - action: action_converter_moeda
+
+- story: Usuário não informa moeda de origem
+  steps:
+    - intent: converter_moeda
+      entities:
+        - valor: "50"
+        - moeda_destino: "dólares"
+    - action: utter_pedir_moeda_origem
+    - intent: converter_moeda
+      entities:
+        - moeda_origem: "reais"
+    - action: action_converter_moeda
+
+- story: Usuário não informa moeda de destino
+  steps:
+    - intent: converter_moeda
+      entities:
+        - valor: "300"
+        - moeda_origem: "reais"
+    - action: utter_pedir_moeda_destino
+    - intent: converter_moeda
+      entities:
+        - moeda_destino: "euros"
+    - action: action_converter_moeda
+
+- story: Cumprimento seguido de conversão
+  steps:
+    - intent: cumprimentar
+    - action: utter_cumprimentar
+    - intent: converter_moeda
+      entities:
+        - valor: "100"
+        - moeda_origem: "dólares"
+        - moeda_destino: "reais"
+    - action: action_converter_moeda
+    - intent: tchau
+    - action: utter_tchau
