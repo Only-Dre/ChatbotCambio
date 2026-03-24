@@ -1,0 +1,17 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJxVjkEKAyEMRa+SA0hpt15FBpGZUAKaFE3diHdvWofC7PIfj0fCmA7Gq2KPaVcS9jDWETkV9HCOTE2RzW1ZtJlUBI8UD2xKLB7C43bfHCwqlZ5Y/rCnLHUtB19kmXdDQwNZSQktGC7Ba+lMWIrYvlAPu3DHqljjz5tz+wBdYkf9": "action_converter_moeda",
+    "eJzNjzEKwzAMRa+iA5jSrr5KCMYkoghsqdiqF5O7V61DIJ06dpMeXw/9qW8O+qNgC3FREvbQxxA4ZvSwL4mqIlu2JtFqoSy4xrBiVWLxMN0u19nBoFLojvmALSYpY3PwRqZ5VjTUkZWU0ITTSXg27QpTEdsX6mERblgUS/jktt9KfF/9bZv5BThlkfc=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohuTS3oCgzF8hOLKqtjQUAtm8ehQ==": "utter_cumprimentar",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohuTS3oCgzF8hOLKolYFRpSUlqUTyKDgLmxQIAFyo9lw==": "action_listen",
+    "eJylj0EKwzAMBL+iB5jSXv2VEIxJRBHEVpCVXIL/XqUOKemlh960y2rY7bbqYJsF1xAHJc4etnaEHBN6OMRERTFbdikolqFsUj0MS5qFkt1R6g/UoooSLh9/8b6rlYm1WCgxjjGMWJQye+get3vvoLks9MR0mmucWJpysFufRlaBlNCA3QV4JR0IQ50LOK8o+9J3rtb+BYsEg+M=": "action_converter_moeda",
+    "eJzNj8EKg0AMRH8lHyClve6viCyLhhLY3Ug2ehH/vbGKopcWeuktM0weM/U0VzD1gqMPrRJnB9N6+BwSOthEpKKYLTsUFMtQNqkO2iH1QsnuIPMH1KCK4k8fP/Gu1UpkLRZKjF3wHRalzA7qx+3eVLC6LPTEtJtjiCyrqmCxjkZWgZTQgPUJeCZtCEPtCziPKMvSd+7LEdevv13TvACb683d": "action_listen",
+    "eJzVkUEKg0AMRa+SA0hpt3MVkWHQ0AacGclk3MjcvbFai25aKF10lx9+Hv+TeioVTAPjaF0rFIOBaRlscB4NrKKnJBjUmxOyeiioFANt9gOT19lxeYPKIsh2d/EV7xgt9VGSmnzEztkOk1CIBurL6dxUsGwj0xX9thxdH3lRFcyrVyKNQEKowHoH3JNWhKK2BjGMyHPTh+/DEser/27zo5c8Q0l7c7mU5g4Jef4/": "utter_tchau",
+    "eJzVkk0KgzAQha+SA0hpt7mKSAg6tAP5kcnEjXj3jo216KZCcdHdvOHNx3sk9ThVauwJBmNbxhi0GstggvWg1SIcJoYg3pyAxINBJGvVZt8TepktTV9QmRnIbC5+4u2jJRc5iclH6KzpIDGGqFV9u1ybSpVtJLyDX5eDdZGKqtS8+iSSCMgIAqw3wC1pQQhqbRDDADQ3ffkOlthf/Xebk57kHYrbh83HfluxnhykeQJYSC3s": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBJJ5YFJ+bn5qSWFxbGwsA1Hwe1Q==": "action_listar_moedas",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBJJ5YFJ+bn5qSWFxLvFkIPYSMjAUAALU+0Q==": "action_listen",
+    "eJytj0sKwzAMRK+iA4TSbn0VE4xJRBE4UrHVbIzvXuXXkF0X3WmG0WPG19ZBfWWcQxyUhB3U7QgcJ3Swi0RFkS37LpgtQ2xSHSx+zGESHGNpv7POn78h13oliRYLrd9hxKLE4sA/bve+g82VTE+cvuYck+RNdbBYZyXrQ0poQH8BXkk7wlDHhEF4xqy4r2it/wBmQIUd": "action_converter_moeda",
+    "eJzNj0sKwzAMRK+iA4TSbn0VE4xJRBE4VpHVbEzuXuXThnSVRRfdaYaZh8bXqYH6EBxD7JQ4O6jrEXIc0MEmEhXFbNlnQbEMZZPqYPajhIGxj2U6z9o7P0Mu75XEWiy0tEOPRSmzA3+7XNsGVpeF7jh8zDEmllU1MFv7S/YPKaEB/QF4JG0IQ70ndJxHFMVtxckR362/XdO+AHPizxc=": "action_listen"
+  }
+}

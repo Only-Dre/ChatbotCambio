@@ -11,42 +11,6 @@ stories:
         - moeda_destino: "reais"
     - action: action_converter_moeda
 
-- story: Usuário não informa o valor
-  steps:
-    - intent: converter_moeda
-      entities:
-        - moeda_origem: "euros"
-        - moeda_destino: "reais"
-    - action: utter_pedir_valor
-    - intent: converter_moeda
-      entities:
-        - valor: "200"
-    - action: action_converter_moeda
-
-- story: Usuário não informa moeda de origem
-  steps:
-    - intent: converter_moeda
-      entities:
-        - valor: "50"
-        - moeda_destino: "dólares"
-    - action: utter_pedir_moeda_origem
-    - intent: converter_moeda
-      entities:
-        - moeda_origem: "reais"
-    - action: action_converter_moeda
-
-- story: Usuário não informa moeda de destino
-  steps:
-    - intent: converter_moeda
-      entities:
-        - valor: "300"
-        - moeda_origem: "reais"
-    - action: utter_pedir_moeda_destino
-    - intent: converter_moeda
-      entities:
-        - moeda_destino: "euros"
-    - action: action_converter_moeda
-
 - story: Cumprimento seguido de conversão
   steps:
     - intent: cumprimentar
@@ -59,3 +23,53 @@ stories:
     - action: action_converter_moeda
     - intent: tchau
     - action: utter_tchau
+
+- story: Listar moedas e depois converter
+  steps:
+    - intent: listar_moedas
+    - action: action_listar_moedas
+    - intent: converter_moeda
+      entities:
+        - valor: "50"
+        - moeda_origem: "euros"
+        - moeda_destino: "reais"
+    - action: action_converter_moeda
+
+- story: Conversão sem valor
+  steps:
+    - intent: converter_moeda
+      entities:
+        - moeda_origem: "dólares"
+        - moeda_destino: "reais"
+    - action: action_converter_moeda
+    - action: utter_pedir_valor
+    - intent: informar_valor
+      entities:
+        - valor: "100"
+    - action: action_converter_moeda
+
+- story: Conversão sem moeda origem
+  steps:
+    - intent: converter_moeda
+      entities:
+        - valor: "100"
+        - moeda_destino: "reais"
+    - action: action_converter_moeda
+    - action: utter_pedir_moeda_origem
+    - intent: informar_moeda_origem
+      entities:
+        - moeda_origem: "dólares"
+    - action: action_converter_moeda
+
+- story: Conversão sem moeda destino
+  steps:
+    - intent: converter_moeda
+      entities:
+        - valor: "100"
+        - moeda_origem: "dólares"
+    - action: action_converter_moeda
+    - action: utter_pedir_moeda_destino
+    - intent: informar_moeda_destino
+      entities:
+        - moeda_destino: "reais"
+    - action: action_converter_moeda

@@ -3,22 +3,21 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-
-# Website caso eu precise de mais chaves de API - https://www.exchangerate-api.com
+# Website de API Keys -> https://www.exchangerate-api.com
 API_KEY = "529bea76f5bb60d262bd8b56"
 
 # Mapeamento de nomes informais para códigos ISO
 MOEDAS_MAP = {
     "real": "BRL", "reais": "BRL", "brl": "BRL",
-    "dólar": "USD", "dólares": "USD", "dollar": "USD", "usd": "USD",
+    "dolar": "USD", "dolares": "USD", "dólares": "USD", "dólar": "USD", "dollar": "USD", "usd": "USD",
     "euro": "EUR", "euros": "EUR", "eur": "EUR",
     "libra": "GBP", "libras": "GBP", "gbp": "GBP",
     "iene": "JPY", "ienes": "JPY", "jpy": "JPY",
     "peso": "ARS", "pesos": "ARS", "ars": "ARS",
     "franco": "CHF", "francos": "CHF", "chf": "CHF",
     "yuan": "CNY", "cny": "CNY",
-    "dólar canadense": "CAD", "cad": "CAD",
-    "dólar australiano": "AUD", "aud": "AUD",
+    "dolar canadense": "CAD", "cad": "CAD",
+    "dolar australiano": "AUD", "aud": "AUD",
 }
 
 
@@ -34,7 +33,7 @@ class ActionConverterMoeda(Action):
     def name(self) -> str:
         return "action_converter_moeda"
 
-    def run(self, dispatcher: CollectingDispatcher,
+    async def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: dict) -> list:
 
@@ -70,24 +69,24 @@ class ActionConverterMoeda(Action):
                 taxa = data["conversion_rate"]
                 dispatcher.utter_message(
                     text=(
-                        f"💱 *Conversão realizada!*\n"
-                        f"{valor} {codigo_origem} = *{resultado:.2f} {codigo_destino}*\n"
+                        f"💱 Conversão realizada!\n"
+                        f"{valor} {codigo_origem} = {resultado:.2f} {codigo_destino}\n"
                         f"Taxa de câmbio: 1 {codigo_origem} = {taxa:.4f} {codigo_destino}"
                     )
                 )
             else:
                 erro = data.get("error-type", "desconhecido")
                 dispatcher.utter_message(
-                    text=f"⚠️ Não consegui realizar a conversão. Erro: {erro}. Verifique os códigos das moedas."
+                    text=f"Nao consegui realizar a conversao. Erro: {erro}. Verifique os codigos das moedas."
                 )
 
         except requests.exceptions.ConnectionError:
             dispatcher.utter_message(
-                text="⚠️ Sem conexão com a API de câmbio. Verifique sua internet e tente novamente."
+                text="Sem conexao com a API de cambio. Verifique sua internet e tente novamente."
             )
         except Exception as e:
             dispatcher.utter_message(
-                text=f"⚠️ Ocorreu um erro inesperado: {str(e)}"
+                text=f"Ocorreu um erro inesperado: {str(e)}"
             )
 
         # Limpa os slots para nova consulta
@@ -103,23 +102,23 @@ class ActionListarMoedas(Action):
     def name(self) -> str:
         return "action_listar_moedas"
 
-    def run(self, dispatcher: CollectingDispatcher,
+    async def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: dict) -> list:
 
         moedas = (
-            "💱 *Moedas suportadas:*\n\n"
-            "🇧🇷 BRL — Real brasileiro\n"
-            "🇺🇸 USD — Dólar americano\n"
-            "🇪🇺 EUR — Euro\n"
-            "🇬🇧 GBP — Libra esterlina\n"
-            "🇯🇵 JPY — Iene japonês\n"
-            "🇦🇷 ARS — Peso argentino\n"
-            "🇨🇭 CHF — Franco suíço\n"
-            "🇨🇳 CNY — Yuan chinês\n"
-            "🇨🇦 CAD — Dólar canadense\n"
-            "🇦🇺 AUD — Dólar australiano\n\n"
-            "💡 Dica: você pode dizer o nome ou o código, ex: *reais* ou *BRL*."
+            "Moedas suportadas:\n\n"
+            "BRL - Real brasileiro\n"
+            "USD - Dolar americano\n"
+            "EUR - Euro\n"
+            "GBP - Libra esterlina\n"
+            "JPY - Iene japones\n"
+            "ARS - Peso argentino\n"
+            "CHF - Franco suico\n"
+            "CNY - Yuan chines\n"
+            "CAD - Dolar canadense\n"
+            "AUD - Dolar australiano\n\n"
+            "Dica: voce pode dizer o nome ou o codigo, ex: reais ou BRL."
         )
         dispatcher.utter_message(text=moedas)
         return []

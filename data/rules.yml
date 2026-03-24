@@ -16,8 +16,3 @@ rules:
   steps:
     - intent: listar_moedas
     - action: action_listar_moedas
-
-- rule: Converter moeda quando tudo informado
-  steps:
-    - intent: converter_moeda
-    - action: action_converter_moeda

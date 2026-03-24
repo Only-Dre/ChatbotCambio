@@ -1,0 +1,56 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "back": 0,
+        "converter_moeda": 1,
+        "cumprimentar": 2,
+        "listar_moedas": 3,
+        "nlu_fallback": 4,
+        "out_of_scope": 5,
+        "restart": 6,
+        "session_start": 7,
+        "tchau": 8
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_converter_moeda": 13,
+        "action_listar_moedas": 14,
+        "utter_cumprimentar": 15,
+        "utter_tchau": 16,
+        "utter_pedir_valor": 17,
+        "utter_pedir_moeda_origem": 18,
+        "utter_pedir_moeda_destino": 19
+      },
+      "entities": {
+        "moeda_destino": 0,
+        "moeda_origem": 1,
+        "valor": 2
+      },
+      "slots": {
+        "moeda_origem_0": 0,
+        "moeda_destino_0": 1,
+        "valor_0": 2,
+        "valor_1": 3
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

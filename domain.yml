@@ -5,6 +5,9 @@ intents:
   - listar_moedas
   - cumprimentar
   - tchau
+  - informar_valor
+  - informar_moeda_origem
+  - informar_moeda_destino
 
 entities:
   - moeda_origem
@@ -47,11 +50,6 @@ responses:
 actions:
   - action_converter_moeda
   - action_listar_moedas
-  - utter_cumprimentar
-  - utter_tchau
-  - utter_pedir_valor
-  - utter_pedir_moeda_origem
-  - utter_pedir_moeda_destino
 
 session_config:
   session_expiration_time: 60

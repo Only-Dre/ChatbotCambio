@@ -41,3 +41,25 @@ nlu:
     - Obrigado, tchau
     - Valeu, até mais
     - Encerrar
+
+- intent: informar_valor
+  examples: |
+    - [100](valor)
+    - [50](valor) reais
+    - o valor é [200](valor)
+    - são [300](valor)
+    - [75](valor)
+
+- intent: informar_moeda_origem
+  examples: |
+    - [dólares](moeda_origem)
+    - de [euros](moeda_origem)
+    - quero converter de [reais](moeda_origem)
+    - [libras](moeda_origem)
+
+- intent: informar_moeda_destino
+  examples: |
+    - [reais](moeda_destino)
+    - para [euros](moeda_destino)
+    - quero receber em [dólares](moeda_destino)
+    - [ienes](moeda_destino)
